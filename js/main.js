@@ -79,7 +79,7 @@ sr.reveal('.form', {
 sr.reveal('.form2', {
 
     origin: 'right',
-    delay: 500,
+    delay: 200,
     distance: '120px',
     easing: 'ease-in-out',
 }, 500);
