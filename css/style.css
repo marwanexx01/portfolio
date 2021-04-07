@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.home-conainer {
+    height: 100vh;
+}
+
+
+/* body {
+    height: 4000px;
+} */
+
+
+/* star navbar */
+
+#top-nav h1 {
+    margin: 0;
+    padding: 23px 0px;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #000000d9;
+    margin-left: 40px;
+}
+
+#top-nav h1 span {
+    color: #39D;
+}
+
+p {
+    position: inherit;
+    width: 100%;
+    top: 0;
+    margin: 5px 0;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+/* Relative Code Starts Here */
+
+#top-nav {
+    /* position: fixed; */
+    width: 100%;
+    height: 135px;
+    background: #fff;
+}
+
+.nav-menu {
+    background: none;
+    width: 60px;
+    height: 80px;
+    top: 0;
+    right: 15px;
+    -webkit-transition: width 0.2s ease, height 0.4s ease;
+    -moz-transition: width 0.2s ease, height 0.4s ease;
+    -o-transition: width 0.2s ease, height 0.4s ease;
+    transition: width 0.2s ease, height 0.4s ease;
+}
+
+.open {
+    position: fixed;
+    /* background: #30C2FF; */
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.menu-list {
+    margin-top: 100px;
+    text-align: center;
+    /* font-family: 'Open Sans', Helvetica; */
+    font-size: 30px;
+    opacity: 0;
+}
+
+.list-open {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.64s ease;
+    -webkit-transition-delay: 0.34s;
+    -moz-transition-delay: 0.34s;
+    -o-transition-delay: 0.34s;
+    transition-delay: 0.34s;
+}
+
+.menu-list li {
+    padding: 10px;
+    background: none;
+    color: #fff;
+}
+
+.menu-list li:hover {
+    color: wheat;
+    cursor: pointer;
+}
+
+li .social-icons:hover {
+    background: none;
+    color: wheat;
+}
+
+.social-icons {
+    margin-top: 20px;
+    font-size: 24px
+}
+
+.social-icons a {
+    margin: 18px;
+    color: #fff;
+}
+
+.menu-list i:hover {
+    color: wheat;
+}
+
+
+/* Burger */
+
+#burger-wrap {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 80px;
+}
+
+.burger {
+    position: absolute;
+    top: 9px;
+    right: 3%;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background-color: transparent;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 16px;
+    right: 16px;
+    height: 3px;
+    background: #39D;
+    border-radius: 15px;
+    -webkit-transition: background 0.3s .3s;
+    transition: background 0.3s .3s;
+    -o-transition: background 0s 0s;
+    -webkit-transition-delay: 0.4s, 0s;
+    transition-delay: 0.4s, 0s;
+}
+
+.open .burger span {
+    background: 0 0 transparent;
+    transform: rotate(90deg);
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0s ease;
+    -webkit-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s;
+}
+
+.burger span::after,
+.burger span::before {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #39D;
+    content: "";
+    border-radius: 5px;
+    -webkit-transition-duration: .3s, .3s;
+    transition-duration: .3s, .3s;
+    -webkit-transition-delay: 0.4s, 0s;
+    transition-delay: 0.4s, 0s;
+}
+
+.burger span::before {
+    top: -8px;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+}
+
+.burger span::after {
+    bottom: -8px;
+    -webkit-transition-property: bottom, -webkit-transform;
+    transition-property: bottom, transform;
+}
+
+.open .burger span::after,
+.open .burger span::before {
+    -webkit-transition-delay: 0s, .4s;
+    transition-delay: 0s, .4s;
+    background-color: #fafafa;
+}
+
+.open .burger span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.open .burger span::after {
+    bottom: 1px;
+    /* Fix for codepen, set to zero for normal use */
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+/* Disable scrollbar on Chrome and Safari browsers! */
+
+html::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* star navbar */
+
+
+/* start home */
+
+.home-img img {
+    width: 100%;
+}
+
+h2 {
+    padding-top: 20%;
+    padding-bottom: 40px;
+    line-height: 1.5em;
+    letter-spacing: 5px;
+    font-size: 2.5em;
+}
+
+h2 span {
+    color: #30C2FF;
+    font-family: 'Dela Gothic One', cursive;
+    letter-spacing: 5px;
+    font-size: 1em;
+}
+
+
+/* start home */
+
+
+/* start about */
+
+.about-container img {
+    width: 100%;
+}
+
+.about-container a {
+    text-decoration: none;
+    color: white;
+    background: #30C2FF;
+    text-transform: uppercase;
+    border: 2px solid #30c2ff;
+    padding: 5% 8%;
+}
+
+.about {
+    height: 400px;
+}
+
+.about-container p {
+    padding-left: 13%;
+    padding-top: 31%;
+}
+
+.about-container p a:hover {
+    background-color: #00b3ff;
+}
+
+
+/* slider */
+
+
+/* slider */
+
+
+/* start about */
+
+
+/* start skills */
+
+.skills-container {
+    background-color: #1B242F;
+    padding-bottom: 100px;
+    height: fit-content;
+}
+
+.skills-container .text {
+    padding-top: 7.5em;
+}
+
+.skills-container .text h4 {
+    font-size: 1.2em;
+    color: #FFF;
+    background: #30C2FF;
+    display: inline-block;
+    padding: .5em 1.5em;
+    position: relative;
+    box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.skills-container .text h4:before {
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    bottom: -9px;
+    left: 12px;
+    border-style: solid;
+    border-width: 14px 11px 0 12px;
+    border-color: #30C2FF transparent transparent transparent;
+}
+
+.skills-container .text hr {
+    border: 4px solid #30c2ff80;
+    padding-top: -1px;
+    border-radius: 5px;
+    width: 161px;
+    padding-top: -7px;
+    margin: 19px auto;
+    margin-bottom: 4.5em;
+    opacity: 100%;
+}
+
+.progress-bar {
+    background-color: #30C2FF;
+}
+
+.skills-container p {
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    cursor: pointer;
+    -webkit-transition: color .25s ease-in;
+    /* For Safari 3.0 to 6.0 */
+    transition: color .25s ease-in;
+    /* For modern browsers */
+}
+
+.skills-container i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.front:hover>p {
+    color: #30C2FF;
+}
+
+.back:hover>p {
+    color: #30C2FF;
+}
+
+
+/* start skills */
+
+
+/* start contact me */
+
+.contact-me {
+    background-image: url('../img/contact.jpeg');
+    /* height: min-content; */
+    background-size: cover;
+}
+
+.contact-me .text {
+    padding-top: 7.5em;
+}
+
+.contact-me .text h4 {
+    font-size: 1.2em;
+    color: #FFF;
+    background: #30C2FF;
+    display: inline-block;
+    padding: .5em 1.5em;
+    position: relative;
+    box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.contact-me .text h4:before {
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    bottom: -9px;
+    left: 12px;
+    border-style: solid;
+    border-width: 14px 11px 0 12px;
+    border-color: #30C2FF transparent transparent transparent;
+}
+
+.contact-me .text hr {
+    border: 4px solid #30c2ff80;
+    padding-top: -1px;
+    border-radius: 5px;
+    width: 161px;
+    padding-top: -7px;
+    margin: 19px auto;
+    margin-bottom: 4.5em;
+    opacity: 100%;
+}
+
+.form {
+    background: white;
+    font-family: sans-serif;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding-top: 15px;
+    height: 92%;
+}
+
+.form a {
+    text-decoration: none;
+}
+
+.form .p1 {
+    font-weight: 600;
+    color: black;
+}
+
+.form p {
+    color: #666666;
+}
+
+.form i {
+    margin-bottom: 10px;
+    color: #30C2FF;
+}
+
+.form i:nth-of-type(3) {
+    margin-bottom: 15px;
+}
+
+
+/* start contact me */
+
+.inputs {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.feedback-input {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #30C2FF;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus {
+    border: 2px solid #30C2FF;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+.submit {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #30C2FF;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+
+.submit:hover {
+    background: #06b2fc;
+}
+
+.form2 {
+    background-color: white;
+    font-family: sans-serif;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+    padding-top: 34px;
+    height: 92%;
+}
+
+address {
+    padding-bottom: 16px;
+}
