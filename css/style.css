@@ -9,13 +9,18 @@ body {
 }
 
 
+/* white space fix */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
 /* .home-conainer {
     height: 100vh;
-} */
-
-
-/* body {
-    height: 4000px;
 } */
 
 
@@ -293,13 +298,8 @@ h2 span {
     padding: 5% 8%;
 }
 
-.about {
-    height: 400px;
-}
-
 .about-container p {
-    padding-left: 13%;
-    padding-top: 31%;
+    line-height: 20;
 }
 
 .about-container p a:hover {

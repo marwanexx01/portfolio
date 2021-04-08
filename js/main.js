@@ -13,27 +13,27 @@ $('document').ready(function() {
 const sr = ScrollReveal();
 
 
-sr.reveal('.burger ', {
+// sr.reveal('.burger ', {
 
-    // origin: 'top',
-    delay: 100,
-    distance: '120px',
-    easing: 'ease-in-out',
-});
-sr.reveal('h1 ', {
+//     // origin: 'top',
+//     delay: 100,
+//     distance: '120px',
+//     easing: 'ease-in-out',
+// });
+// sr.reveal('h1 ', {
 
-    origin: 'top',
-    delay: 100,
-    distance: '120px',
-    easing: 'ease-in-out',
-});
-sr.reveal('.home-conainer ', {
+//     origin: 'top',
+//     delay: 100,
+//     distance: '120px',
+//     easing: 'ease-in-out',
+// });
+// sr.reveal('.home-conainer ', {
 
-    origin: 'left',
-    delay: 100,
-    distance: '120px',
-    easing: 'ease-in-out',
-});
+//     origin: 'left',
+//     delay: 100,
+//     distance: '120px',
+//     easing: 'ease-in-out',
+// });
 sr.reveal('.about-container p', {
 
     origin: 'right',
